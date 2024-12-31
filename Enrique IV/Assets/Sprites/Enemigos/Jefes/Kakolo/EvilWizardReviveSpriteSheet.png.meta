@@ -1,0 +1,677 @@
+fileFormatVersion: 2
+guid: f8e4e7e705d76a34490bfe57e4958d3a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 886
+        width: 143
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df297e290a3ba443af12c8a6f49b1c0
+      internalID: -424192798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 886
+        width: 141
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0e8f8dd5c7c1f42b84d2a479693b54
+      internalID: 1531338788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 886
+        width: 145
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e0d4f10e695d8439a8d87bdeb9aeb2
+      internalID: -133860730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 886
+        width: 142
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74a350ff889181478af05a3d5ab0339
+      internalID: -776736451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 886
+        width: 137
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e30f62ab3219044ea6e0ba99b5f2a08
+      internalID: -738325649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 859
+        width: 109
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf22f6c4374d714c8be89b4d1889a57
+      internalID: -1846175227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 106
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bfb641c0ec42d4aa45169565e4292d
+      internalID: -1523664055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 702
+        width: 102
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01736c8047a1f374c9a9fadac8e811d9
+      internalID: -807070300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 727
+        width: 160
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf46f8c8ac347545ac3f320b7fd3242
+      internalID: 1216761229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 727
+        width: 157
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06346a9826d11754b814cf27bcc05e6e
+      internalID: 56513686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 727
+        width: 149
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1613cbc51f19b449ca94b3e4ab274c
+      internalID: -904718470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 727
+        width: 139
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e6c5abbb092574c95e142d9cfa9c64
+      internalID: 991869737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 582
+        width: 142
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852ded30e1e93cb4cbe690d5f00f5283
+      internalID: -997624219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 574
+        width: 150
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10f955f2974dd54395da64c11698ee0
+      internalID: 452227386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 575
+        width: 144
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf40c7a30327004398b5e5e9c8085ff
+      internalID: 1832690689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 575
+        width: 149
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81229658ea0e4e4193129394374abcc
+      internalID: -1904378939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 582
+        width: 140
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4b6a4bfa4a7e7479ad9655767183e5
+      internalID: -172546420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 529
+        width: 99
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fa5b613b5b7d246aae5dcdc9b81685
+      internalID: -258140710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 113
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b27c02b079f66143bf0edf299b3f69b
+      internalID: -374150504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 411
+        width: 175
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e37ca99eb098234aa9882082b715e68
+      internalID: -776527145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 417
+        width: 185
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e512f3add222d64cb7dc03a73740ae6
+      internalID: -958382804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 414
+        width: 176
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c562c3323744bb04ca9f44af675c76ce
+      internalID: 1869687173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 699
+        width: 90
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9424a5165ce764d9454e7822d01564
+      internalID: 1789208951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 859
+        width: 103
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292615e4b41ff3e41ad40265ffbf0df2
+      internalID: 2107551203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilWizardReviveSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 570
+        width: 137
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ef58cadc044d740ac334165770a868
+      internalID: 1483294682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EvilWizardReviveSpriteSheet_0: -424192798
+      EvilWizardReviveSpriteSheet_1: 1531338788
+      EvilWizardReviveSpriteSheet_10: -904718470
+      EvilWizardReviveSpriteSheet_11: 991869737
+      EvilWizardReviveSpriteSheet_12: -997624219
+      EvilWizardReviveSpriteSheet_13: 452227386
+      EvilWizardReviveSpriteSheet_14: 1832690689
+      EvilWizardReviveSpriteSheet_15: -1904378939
+      EvilWizardReviveSpriteSheet_16: -172546420
+      EvilWizardReviveSpriteSheet_17: -258140710
+      EvilWizardReviveSpriteSheet_18: -374150504
+      EvilWizardReviveSpriteSheet_19: -776527145
+      EvilWizardReviveSpriteSheet_2: -133860730
+      EvilWizardReviveSpriteSheet_20: -958382804
+      EvilWizardReviveSpriteSheet_21: 1869687173
+      EvilWizardReviveSpriteSheet_22: 1789208951
+      EvilWizardReviveSpriteSheet_23: 2107551203
+      EvilWizardReviveSpriteSheet_24: 1483294682
+      EvilWizardReviveSpriteSheet_3: -776736451
+      EvilWizardReviveSpriteSheet_4: -738325649
+      EvilWizardReviveSpriteSheet_5: -1846175227
+      EvilWizardReviveSpriteSheet_6: -1523664055
+      EvilWizardReviveSpriteSheet_7: -807070300
+      EvilWizardReviveSpriteSheet_8: 1216761229
+      EvilWizardReviveSpriteSheet_9: 56513686
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
