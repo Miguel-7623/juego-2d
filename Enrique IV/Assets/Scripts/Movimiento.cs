@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // Velocidad de movimiento del jugador
     [SerializeField] private BarraVida barraVida; // Referencia a la barra de vida
-    [SerializeField] private float maxHealth = 100f; // Salud máxima del jugador
+    [SerializeField] private float maxHealth ; // Salud máxima del jugador
     [SerializeField] private float currentHealth;  // Salud actual del jugador
     [SerializeField] private float invulnerableDuration = 2f; // Duración de la invulnerabilidad en segundos
 

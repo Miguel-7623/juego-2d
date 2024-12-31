@@ -157,13 +157,14 @@ MonoBehaviour:
   velocidadMovimento: 3
   distanciaMax: 15
   puntoInicial: {x: 0, y: 0, z: 0}
+  puntoFinal: {x: 0, y: 0, z: 0}
   mirandoderecha: 1
   estadoActual: 0
   rb2D: {fileID: 2769040382550948816}
   animator: {fileID: 5261998787163602225}
   muerto: 0
   dano: 20
-  controladorduisparo: {fileID: 0}
+  controladorduisparo: {fileID: 7401738894032311509}
   bala: {fileID: 4287213679739850278, guid: 50a70a9586ecfaf4eb04b74df90d1e55, type: 3}
 --- !u!61 &7946573657590389743
 BoxCollider2D:

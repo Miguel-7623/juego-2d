@@ -125,10 +125,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
-  velocidadMovimento: 10
+  velocidadMovimiento: 2.09
+  distanciaPatrulla: 10
   distanciaMax: 20
-  puntoInicial: {x: 0, y: 0, z: 0}
-  mirandoderecha: 1
   estadoActual: 0
   animator: {fileID: 1671891665105435775}
   dano: 30

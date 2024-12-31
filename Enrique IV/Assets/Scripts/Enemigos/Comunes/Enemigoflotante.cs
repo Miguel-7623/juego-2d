@@ -7,82 +7,97 @@ public class EnemigoFlotanteIA : MonoBehaviour
     public float radioBusqueda;
     public LayerMask capajudador;
     public Transform transformJugador;
-    public float velocidadMovimento;
+    public float velocidadMovimiento;
+    public float distanciaPatrulla;
     public float distanciaMax;
-    public Vector3 puntoInicial;
-    public bool mirandoderecha;
+
+    private Vector3 puntoInicial;
+    private Vector3 puntoFinal;
+    private bool patrullandoDerecha = true;
+
     public EstadosMovimiento estadoActual;
-   
+
     public Animator animator;
     [SerializeField] private float dano;
+
     public enum EstadosMovimiento
     {
-        Esperando,
+        Patrullando,
         Siguiendo,
         Volviendo
     }
 
-
     private void Start()
     {
         puntoInicial = transform.position;
+        puntoFinal = puntoInicial + new Vector3(distanciaPatrulla, 0, 0);
+        estadoActual = EstadosMovimiento.Patrullando;
     }
+
     private void Update()
     {
         switch (estadoActual)
         {
-            case EstadosMovimiento.Esperando:
-                EstadoEsperando();
+            case EstadosMovimiento.Patrullando:
+                EstadoPatrullando();
                 break;
             case EstadosMovimiento.Siguiendo:
-                EstadoSiguiedo();
+                EstadoSiguiendo();
                 break;
             case EstadosMovimiento.Volviendo:
                 EstadoVolviendo();
                 break;
-
         }
-
-
-
     }
-    private void EstadoEsperando()
+
+    private void EstadoPatrullando()
     {
         Collider2D jugadorCollider = Physics2D.OverlapCircle(transform.position, radioBusqueda, capajudador);
         if (jugadorCollider)
         {
             transformJugador = jugadorCollider.transform;
             estadoActual = EstadosMovimiento.Siguiendo;
+            return;
+        }
 
+        // Movimiento entre los puntos de patrulla
+        if (patrullandoDerecha)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, puntoFinal, velocidadMovimiento * Time.deltaTime);
+            GiraObjetivo(puntoFinal);
+
+            if (Vector2.Distance(transform.position, puntoFinal) < 0.1f)
+            {
+                patrullandoDerecha = false;
+            }
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, puntoInicial, velocidadMovimiento * Time.deltaTime);
+            GiraObjetivo(puntoInicial);
+
+            if (Vector2.Distance(transform.position, puntoInicial) < 0.1f)
+            {
+                patrullandoDerecha = true;
+            }
         }
     }
-    public void TomarDan(float dan)
-    {
 
-
-        animator.SetTrigger("Muerte");
-        Destroy(gameObject);
-
-
-    }
-    //Por si le quuieren agregar salud al enemigo
-    private void Muerte()
-    {
-        Destroy(gameObject);
-    }
-
-    private void EstadoSiguiedo()
+    private void EstadoSiguiendo()
     {
         animator.SetBool("Corriendo", true);
+
         if (transformJugador == null)
         {
             estadoActual = EstadosMovimiento.Volviendo;
             return;
         }
-        transform.position = Vector2.MoveTowards(transform.position, transformJugador.position, velocidadMovimento * Time.deltaTime);
+
+        transform.position = Vector2.MoveTowards(transform.position, transformJugador.position, velocidadMovimiento * Time.deltaTime);
         GiraObjetivo(transformJugador.position);
-        if (Vector2.Distance(transform.position, puntoInicial) > distanciaMax 
-            || Vector2.Distance(transform.position, transformJugador.position) > distanciaMax)
+
+        if (Vector2.Distance(transform.position, puntoInicial) > distanciaMax ||
+            Vector2.Distance(transform.position, transformJugador.position) > distanciaMax)
         {
             estadoActual = EstadosMovimiento.Volviendo;
             transformJugador = null;
@@ -91,43 +106,23 @@ public class EnemigoFlotanteIA : MonoBehaviour
 
     private void EstadoVolviendo()
     {
-
-        transform.position = Vector2.MoveTowards(transform.position, puntoInicial, velocidadMovimento * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, puntoInicial, velocidadMovimiento * Time.deltaTime);
         GiraObjetivo(puntoInicial);
+
         if (Vector2.Distance(transform.position, puntoInicial) < 0.1f)
         {
-           
             animator.SetBool("Corriendo", false);
-            estadoActual = EstadosMovimiento.Esperando;
+            estadoActual = EstadosMovimiento.Patrullando;
         }
     }
-      public void OnCollisionEnter2D(Collision2D collision)
-      {
-          // Verifica si el objeto con el que colisiona tiene la etiqueta "Player"
-          if (collision.collider.CompareTag("Jugador"))
-          {
-              Debug.Log("Jugador detectado en colisión");
 
-              // Intenta obtener el componente PlayerMovement
-              PlayerMovement player = collision.collider.GetComponent<PlayerMovement>();
-              if (player != null)
-              {
-                  // Aplica daño al jugador
-                  player.TakeDamage(dano);
-              }
-              else
-              {
-                  Debug.LogWarning("El objeto con etiqueta 'Player' no tiene un componente PlayerMovement.");
-              }
-          }
-      }
     private void GiraObjetivo(Vector3 objetivo)
     {
-        if (objetivo.x > transform.position.x && !mirandoderecha)
+        if (objetivo.x > transform.position.x && !patrullandoDerecha)
         {
             Girar();
         }
-        else if (objetivo.x < transform.position.x && mirandoderecha)
+        else if (objetivo.x < transform.position.x && patrullandoDerecha)
         {
             Girar();
         }
@@ -135,13 +130,34 @@ public class EnemigoFlotanteIA : MonoBehaviour
 
     private void Girar()
     {
-        mirandoderecha = !mirandoderecha;
+        patrullandoDerecha = !patrullandoDerecha;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Jugador"))
+        {
+            Debug.Log("Jugador detectado en colisión");
+
+            PlayerMovement player = collision.collider.GetComponent<PlayerMovement>();
+            if (player != null)
+            {
+                player.TakeDamage(dano);
+            }
+            else
+            {
+                Debug.LogWarning("El objeto con etiqueta 'Jugador' no tiene un componente PlayerMovement.");
+            }
+        }
+    }
+
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(puntoInicial, puntoInicial + new Vector3(distanciaPatrulla, 0, 0));
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radioBusqueda);
-        Gizmos.DrawWireSphere(puntoInicial, distanciaMax);
     }
 }
