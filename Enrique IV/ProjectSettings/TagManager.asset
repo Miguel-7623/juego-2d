@@ -8,6 +8,9 @@ TagManager:
   - Jefe
   - Jefeplanta
   - Enemigo
+  - Crocs
+  - pollo
+  - monster
   layers:
   - Default
   - TransparentFX
