@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Velocidad de movimiento del jugador
+    public float moveSpeed; // Velocidad de movimiento del jugador
     [SerializeField] private BarraVida barraVida; // Referencia a la barra de vida
     [SerializeField] private float maxHealth ; // Salud máxima del jugador
     [SerializeField] private float currentHealth;  // Salud actual del jugador
@@ -15,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        // Iniciar la salud del jugador
-        currentHealth = maxHealth;
+    moveSpeed = 10f; // Velocidad de movimiento del jugador
+
+    // Iniciar la salud del jugador
+    currentHealth = maxHealth;
 
         // Inicializar la barra de vida
         if (barraVida != null)
@@ -34,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         // Leer la entrada del jugador
         movement.x = Input.GetAxisRaw("Horizontal"); // A/D o Flechas izquierda/derecha
         movement.y = Input.GetAxisRaw("Vertical");   // W/S o Flechas arriba/abajo
-
         // Verificar si el jugador ha muerto
         if (currentHealth <= 0)
         {
@@ -88,5 +89,27 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Jugador ha muerto.");
         // Lógica para la muerte del jugador (puedes personalizar)
         // Destroy(gameObject); // Opcional, destruye el jugador
+    }
+
+        public void Pollo(float damage)
+    {
+      
+
+        // Reducir la salud del jugador
+        currentHealth -= damage;
+        if (currentHealth > maxHealth) currentHealth = maxHealth; // Evitar valores fuera de rango
+        Debug.Log("Jugador recibió salud. Vida restante: " + currentHealth);
+
+        // Calcular el valor normalizado
+        float healthNormalized = currentHealth / maxHealth;
+
+        // Actualizar la barra de vida con el valor normalizado
+        if (barraVida != null)
+        {
+            barraVida.CambiarVidaAct(healthNormalized);
+        }
+
+        
+       
     }
 }
