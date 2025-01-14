@@ -9,6 +9,9 @@ TagManager:
   - Jefeplanta
   - Enemigo
   - SePuedeLevantar
+  - Crocs
+  - pollo
+  - monster
   layers:
   - Default
   - TransparentFX
