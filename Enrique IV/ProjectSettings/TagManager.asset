@@ -8,6 +8,7 @@ TagManager:
   - Jefe
   - Jefeplanta
   - Enemigo
+  - SePuedeLevantar
   - Crocs
   - pollo
   - monster
@@ -20,8 +21,8 @@ TagManager:
   - UI
   - Jugador
   - Enemigo
-  - 
-  - 
+  - Suelo
+  - ObjetosLevantables
   - 
   - 
   - 
