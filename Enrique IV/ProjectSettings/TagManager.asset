@@ -8,6 +8,7 @@ TagManager:
   - Jefe
   - Jefeplanta
   - Enemigo
+  - SePuedeLevantar
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Jugador
   - Enemigo
-  - 
-  - 
+  - Suelo
+  - ObjetosLevantables
   - 
   - 
   - 
