@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac563ff8dc829124c941fba0f6f2f97f
+guid: 628255a8a387d8347a8b36fd5af1fac9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,91 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: animacion_caminar_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 4
-        width: 95
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72557a94e0b1f2948a6742a964ef7d97
-      internalID: 331927491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 2
-        width: 92
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c2734665d0c3f04387bbc22e551305f
-      internalID: -805871825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_2
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 90
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e402e0d96992ca4ca04cf2139c0aeba
-      internalID: -1689773645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_3
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 2
-        width: 92
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1cc156bad997e5409278a031eb5179c
-      internalID: -202445769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -190,11 +106,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      animacion_caminar_0: 331927491
-      animacion_caminar_1: -805871825
-      animacion_caminar_2: -1689773645
-      animacion_caminar_3: -202445769
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

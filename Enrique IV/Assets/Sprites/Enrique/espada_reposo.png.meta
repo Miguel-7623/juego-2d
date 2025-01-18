@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac563ff8dc829124c941fba0f6f2f97f
+guid: 581ea8de7360cbb40bcec69937b43daa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,55 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion_caminar_0
+      name: espada_reposo_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 95
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72557a94e0b1f2948a6742a964ef7d97
-      internalID: 331927491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 2
-        width: 92
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c2734665d0c3f04387bbc22e551305f
-      internalID: -805871825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_2
-      rect:
-        serializedVersion: 2
-        x: 192
         y: 0
-        width: 90
-        height: 88
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e402e0d96992ca4ca04cf2139c0aeba
-      internalID: -1689773645
+      spriteID: 4253956870c125045b6b6b8d258e2a75
+      internalID: -1256805688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion_caminar_3
+      name: espada_reposo_1
       rect:
         serializedVersion: 2
-        x: 288
-        y: 2
-        width: 92
-        height: 86
+        x: 100
+        y: 0
+        width: 95
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1cc156bad997e5409278a031eb5179c
-      internalID: -202445769
+      spriteID: 0a03b1fe79bdf6e4390bed68edbb0375
+      internalID: -1618470490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: espada_reposo_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7701446916a3161499479b352c698fd4
+      internalID: -1754257283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: espada_reposo_3
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 95
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8224181a11681479b43844510fad5a
+      internalID: -875251759
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animacion_caminar_0: 331927491
-      animacion_caminar_1: -805871825
-      animacion_caminar_2: -1689773645
-      animacion_caminar_3: -202445769
+      espada_reposo_0: -1256805688
+      espada_reposo_1: -1618470490
+      espada_reposo_2: -1754257283
+      espada_reposo_3: -875251759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

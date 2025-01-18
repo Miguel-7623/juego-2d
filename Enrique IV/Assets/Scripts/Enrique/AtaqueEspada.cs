@@ -11,10 +11,12 @@ public class AtaqueEspada : MonoBehaviour
     public float tiempoEntreAtaques = 1;
 
     private float tiempoUltimoAtaque;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         
     }
 
@@ -23,19 +25,22 @@ public class AtaqueEspada : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && Time.time >= tiempoUltimoAtaque + tiempoEntreAtaques)
         {
-            Atacar();
+            StartCoroutine(Atacar());
             tiempoUltimoAtaque = Time.time;
         }
     }
 
-    void Atacar()
+    private IEnumerator Atacar()
     {
-        Debug.Log("Enrique ataca.");
+        animator.SetBool("atacandoConEspada", true);
+        Debug.Log("ataque con espada");
         Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
         foreach (Collider2D enemigo in enemigosEnRadio)
         {
             VidaEnemigo vidaEnemigo = enemigo.GetComponent<VidaEnemigo>();
             if (vidaEnemigo != null) vidaEnemigo.RecibirDano(vidaReducida);
         }
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("atacandoConEspada", false);
     }
 }

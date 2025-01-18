@@ -30,7 +30,7 @@ public class Telequinesis : MonoBehaviour
 
         if (objetoLevantado != null)
         { 
-            objetoLevantado.position = Vector2.Lerp(objetoLevantado.position, puntoLevantar.position, 5f*Time.deltaTime);
+            objetoLevantado.position = Vector2.Lerp(objetoLevantado.position, puntoLevantar.position, 10f * Time.deltaTime);
         }
     }
 
@@ -53,7 +53,6 @@ public class Telequinesis : MonoBehaviour
         }
     }
 
-    // TODO: cuando se suelta debe lanzarse o algo asi para que haga daño a los enemigos.
     void SoltarObjeto()
     {
         if (objetoLevantado != null)

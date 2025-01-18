@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac563ff8dc829124c941fba0f6f2f97f
+guid: 75a380d54b120d946a791cdfe1f05a51
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion_caminar_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72557a94e0b1f2948a6742a964ef7d97
-      internalID: 331927491
+      spriteID: b2f26b937eb4df7499c99c953e1cb762
+      internalID: 1569345822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion_caminar_1
+      name: idle_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 2
-        width: 92
-        height: 86
+        x: 99
+        y: 4
+        width: 95
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c2734665d0c3f04387bbc22e551305f
-      internalID: -805871825
+      spriteID: deade59ea5a375745a23b4db43b26082
+      internalID: 2010705246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion_caminar_2
+      name: idle_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 90
-        height: 88
+        x: 200
+        y: 4
+        width: 95
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e402e0d96992ca4ca04cf2139c0aeba
-      internalID: -1689773645
+      spriteID: cc2e47c7978d04a48975199c4c187601
+      internalID: -1278559263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion_caminar_3
+      name: idle_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 2
-        width: 92
-        height: 86
+        x: 300
+        y: 4
+        width: 95
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1cc156bad997e5409278a031eb5179c
-      internalID: -202445769
+      spriteID: d0bc006cd279e6344bf2dbdcefcb19c7
+      internalID: 375782270
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animacion_caminar_0: 331927491
-      animacion_caminar_1: -805871825
-      animacion_caminar_2: -1689773645
-      animacion_caminar_3: -202445769
+      idle_0: 1569345822
+      idle_1: 2010705246
+      idle_2: -1278559263
+      idle_3: 375782270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
