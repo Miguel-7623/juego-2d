@@ -13,11 +13,15 @@ public class AtaqueEspada : MonoBehaviour
     private float tiempoUltimoAtaque;
     private Animator animator;
 
+
+    public GameObject jugador;
+    private Transform jugadorTransf;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        
+        jugadorTransf = jugador.transform;
     }
 
     // Update is called once per frame
@@ -28,6 +32,9 @@ public class AtaqueEspada : MonoBehaviour
             StartCoroutine(Atacar());
             tiempoUltimoAtaque = Time.time;
         }
+
+        Vector3 direccion = jugadorTransf.localScale.x > 0 ? Vector3.right : Vector3.left;
+        transform.localScale = new Vector3(direccion.x, transform.localScale.y, transform.localScale.z);
     }
 
     private IEnumerator Atacar()

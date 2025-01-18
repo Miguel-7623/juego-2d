@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d2d74a19b31a9ac40bfd000c028b0f30
+guid: 581ea8de7360cbb40bcec69937b43daa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iron_sword_animation_0
+      name: espada_reposo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 031afa135a3207b4fbeb5875cfe4a774
-      internalID: -20762646
+      spriteID: 4253956870c125045b6b6b8d258e2a75
+      internalID: -1256805688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_sword_animation_1
+      name: espada_reposo_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 95
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a03b1fe79bdf6e4390bed68edbb0375
+      internalID: -1618470490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: espada_reposo_2
       rect:
         serializedVersion: 2
         x: 199
-        y: 17
-        width: 210
-        height: 117
+        y: 0
+        width: 95
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c96a9ed0855d4de4c9db0520f241db66
-      internalID: -1167563401
+      spriteID: 7701446916a3161499479b352c698fd4
+      internalID: -1754257283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_sword_animation_2
+      name: espada_reposo_3
       rect:
         serializedVersion: 2
-        x: 416
-        y: 24
-        width: 224
-        height: 112
+        x: 298
+        y: 0
+        width: 95
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,29 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cc53417dabead5478fc1370efbf912f
-      internalID: 2085303536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: iron_sword_animation_3
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 26
-        width: 205
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73040dc84d40d01469edfba365694da4
-      internalID: -481641
+      spriteID: 6e8224181a11681479b43844510fad5a
+      internalID: -875251759
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      iron_sword_animation_0: -20762646
-      iron_sword_animation_1: -1167563401
-      iron_sword_animation_2: 2085303536
-      iron_sword_animation_3: -481641
+      espada_reposo_0: -1256805688
+      espada_reposo_1: -1618470490
+      espada_reposo_2: -1754257283
+      espada_reposo_3: -875251759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

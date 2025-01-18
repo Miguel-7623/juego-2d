@@ -12,6 +12,7 @@ TagManager:
   - Crocs
   - pollo
   - monster
+  - Espada
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Enemigo
   - Suelo
   - ObjetosLevantables
-  - 
+  - Espada
   - 
   - 
   - 
