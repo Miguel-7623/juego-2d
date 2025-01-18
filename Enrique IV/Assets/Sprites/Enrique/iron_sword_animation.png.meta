@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac563ff8dc829124c941fba0f6f2f97f
+guid: cdd50bd43ffa74e409263789e7a6be1a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,55 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion_caminar_0
+      name: iron_sword_animation_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 95
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72557a94e0b1f2948a6742a964ef7d97
-      internalID: 331927491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 2
-        width: 92
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c2734665d0c3f04387bbc22e551305f
-      internalID: -805871825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion_caminar_2
-      rect:
-        serializedVersion: 2
-        x: 192
         y: 0
-        width: 90
-        height: 88
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e402e0d96992ca4ca04cf2139c0aeba
-      internalID: -1689773645
+      spriteID: 031afa135a3207b4fbeb5875cfe4a774
+      internalID: -20762646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion_caminar_3
+      name: iron_sword_animation_1
       rect:
         serializedVersion: 2
-        x: 288
-        y: 2
-        width: 92
-        height: 86
+        x: 199
+        y: 17
+        width: 210
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1cc156bad997e5409278a031eb5179c
-      internalID: -202445769
+      spriteID: c96a9ed0855d4de4c9db0520f241db66
+      internalID: -1167563401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iron_sword_animation_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 24
+        width: 224
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc53417dabead5478fc1370efbf912f
+      internalID: 2085303536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iron_sword_animation_3
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 26
+        width: 205
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73040dc84d40d01469edfba365694da4
+      internalID: -481641
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animacion_caminar_0: 331927491
-      animacion_caminar_1: -805871825
-      animacion_caminar_2: -1689773645
-      animacion_caminar_3: -202445769
+      iron_sword_animation_0: -20762646
+      iron_sword_animation_1: -1167563401
+      iron_sword_animation_2: 2085303536
+      iron_sword_animation_3: -481641
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
