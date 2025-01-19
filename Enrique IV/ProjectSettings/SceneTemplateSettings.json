@@ -1,8 +1,8 @@
 {
     "templatePinStates": [
         {
-            "templateId": "Empty",
-            "isEnabled": false
+            "templateId": "Basic 2D (Built-in)",
+            "isEnabled": true
         }
     ],
     "dependencyTypeInfos": [
