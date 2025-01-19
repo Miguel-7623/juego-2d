@@ -50,18 +50,22 @@ public class AtaqueEspada : MonoBehaviour
 
         foreach (Collider2D colision in objetos)
         {
-            //VidaEnemigo vidaEnemigo = enemigo.GetComponent<VidaEnemigo>();
-            //if (vidaEnemigo != null) vidaEnemigo.RecibirDano(vidaReducida);
-
             if (colision.CompareTag("Jefe"))
             {
-                Debug.Log("SIMON");
-                colision.GetComponent<JefeAI>().TomarDan(vidaReducida);
+                JefeAI jefe = colision.GetComponent<JefeAI>();
+                if (jefe != null) jefe.TomarDan(vidaReducida);
             }
 
             if (colision.CompareTag("Enemigo"))
             {
-                colision.GetComponent<EnemigoPendejo>().golpe();
+                EnemigoPendejo enemigo = colision.GetComponent<EnemigoPendejo>();
+                if (enemigo != null) enemigo.golpe();
+            }
+
+            if (colision.CompareTag("JefePlanta"))
+            {
+                Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
+                if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
         }
 
