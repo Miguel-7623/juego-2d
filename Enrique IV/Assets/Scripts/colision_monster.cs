@@ -6,7 +6,7 @@ public class colision_monster : MonoBehaviour
 {
     public PlayerMovement Movimiento;
   
-    public float velocidad = 2f; // Velocidad del movimiento
+    public float velocidad = 1f; // Velocidad del movimiento
     public float amplitud = 3f; // Distancia máxima desde el punto inicial
 
     // Start is called before the first frame update

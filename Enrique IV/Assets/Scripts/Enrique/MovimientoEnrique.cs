@@ -13,7 +13,10 @@ public class MovimientoEnrique : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool estaEnSuelo;
-    private Animator animator;
+    private Animator animator; 
+    
+    public int direccion = 1;
+
 
     // ATAQUES CON LAS PATAS.
     public float radioAtaque = 1f;
@@ -21,8 +24,10 @@ public class MovimientoEnrique : MonoBehaviour
     public int vidaReducida = 20;
     public Transform puntoAtaque;
     public float tiempoEntreAtaques = 1;
+   
 
     private float tiempoUltimoAtaque;
+    //public Transform espada;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +36,8 @@ public class MovimientoEnrique : MonoBehaviour
         rb.freezeRotation = true;
 
         animator = GetComponentInChildren<Animator>();
+
+        //espada = GetComponentInChildren<Transform>();
     }
 
     // Update is called once per frame
@@ -52,10 +59,29 @@ public class MovimientoEnrique : MonoBehaviour
             StartCoroutine(AtaqueBasico());
             tiempoUltimoAtaque = Time.time;
         }
-    }
 
-    private IEnumerator AtaqueBasico()
+
+        if (movimiento > 0 && direccion == -1)
+        {
+            Girar();
+        }
+        else if (movimiento < 0 && direccion == 1)
+        {
+            Girar();
+        }
+        
+        //if (espada != null) espada.position = transform.position + (direccion*new Vector3(1f, 0f, 0f));
+    }
+    private void Girar()
     {
+        direccion *= -1; // Cambia la dirección (1 o -1)
+        Vector3 escala = transform.localScale; // Obtiene la escala actual
+        escala.x *= -1; // Invierte el eje X
+        transform.localScale = escala; // Asigna la nueva escala
+    }
+    private IEnumerator AtaqueBasico() { 
+    
+       
         animator.SetBool("estaAtacando", true);
         Debug.Log("ataque basico (con las patas).");
         Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, capaEnemigos);
