@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +26,7 @@ public class JefeAI : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         //barraVida.IniciaBarra(vida);
         Player = GameObject.FindGameObjectWithTag("Jugador").GetComponent<Transform>();
-       
+
         Debug.Log("Jugador detectado: " + Player.gameObject.name);
     }
     /*public void OnCollisionEnter2D(Collision2D collision)
@@ -34,13 +34,13 @@ public class JefeAI : MonoBehaviour
         // Verifica si el objeto con el que colisiona tiene la etiqueta "Player"
         if (collision.collider.CompareTag("Jugador"))
         {
-            Debug.Log("Jugador detectado en colisión");
+            Debug.Log("Jugador detectado en colisiï¿½n");
 
             // Intenta obtener el componente PlayerMovement
             PlayerMovement player = collision.collider.GetComponent<PlayerMovement>();
             if (player != null)
             {
-                // Aplica daño al jugador
+                // Aplica daï¿½o al jugador
                 player.TakeDamage(dano);
             }
             else
@@ -55,11 +55,11 @@ public class JefeAI : MonoBehaviour
         vida -= dan;
         Debug.Log("VIDA: " + vida);
         Debug.Log("DANO: " + dan);
-       // barraVida.CambiarVidaAct(vida);
+        // barraVida.CambiarVidaAct(vida);
         if (vida <= 0)
         {
             animator.SetTrigger("Muerte");
-           
+
         }
     }
 
@@ -82,7 +82,7 @@ public class JefeAI : MonoBehaviour
 
     public void Ataque()
     {
-       // Debug.Log("Ejecutando ataque...");
+        // Debug.Log("Ejecutando ataque...");
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorAtaque.position, radioAtaque, capaJugador);
         foreach (Collider2D colision in objetos)
         {
@@ -112,8 +112,8 @@ public class JefeAI : MonoBehaviour
             animator.SetFloat("Distanciaj", distanciaj);
         }
         //Debug.Log(distanciaj);
-       
-        
+
+
     }
 
     private void OnDrawGizmos()

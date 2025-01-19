@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed; // Velocidad de movimiento del jugador
     [SerializeField] private BarraVida barraVida; // Referencia a la barra de vida
-    [SerializeField] private float maxHealth = 100; // Salud máxima del jugador
+    [SerializeField] private float maxHealth = 100; // Salud mï¿½xima del jugador
     [SerializeField] private float currentHealth;  // Salud actual del jugador
-    [SerializeField] private float invulnerableDuration = 2f; // Duración de la invulnerabilidad en segundos
+    [SerializeField] private float invulnerableDuration = 2f; // Duraciï¿½n de la invulnerabilidad en segundos
 
     private bool isInvulnerable = false; // Bandera para determinar si el jugador es invulnerable
-    private Vector2 movement; // Dirección del movimiento
+    private Vector2 movement; // Direcciï¿½n del movimiento
 
     public int direccion = 1;
     private Animator animator;
@@ -27,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-    moveSpeed = 10f; // Velocidad de movimiento del jugador
+        moveSpeed = 10f; // Velocidad de movimiento del jugador
 
-    // Iniciar la salud del jugador
-    currentHealth = maxHealth;
+        // Iniciar la salud del jugador
+        currentHealth = maxHealth;
 
         // Inicializar la barra de vida
         if (barraVida != null)
@@ -41,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogWarning("BarraVida no asignada en el inspector.");
         }
-    
-        animator = GetComponentInChildren<Animator>();    
+
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -50,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         // Leer la entrada del jugador
         movement.x = Input.GetAxisRaw("Horizontal"); // A/D o Flechas izquierda/derecha
         movement.y = Input.GetAxisRaw("Vertical");   // W/S o Flechas arriba/abajo
+
+
+        Debug.Log(movement.x +  " " + movement.y);
+        animator.SetBool("estaCorriendo", movement.x != 0);
+
         // Verificar si el jugador ha muerto
         if (currentHealth <= 0)
         {
@@ -74,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Girar()
     {
-        direccion *= -1; // Cambia la dirección (1 o -1)
+        direccion *= -1; // Cambia la direcciï¿½n (1 o -1)
         Vector3 escala = transform.localScale; // Obtiene la escala actual
         escala.x *= -1; // Invierte el eje X
         transform.localScale = escala; // Asigna la nueva escala
@@ -106,14 +111,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isInvulnerable)
         {
-            Debug.Log("Jugador es invulnerable, no recibe daño.");
+            Debug.Log("Jugador es invulnerable, no recibe daï¿½o.");
             return; // Salir si el jugador es invulnerable
         }
 
         // Reducir la salud del jugador
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0; // Evitar valores negativos
-        Debug.Log("Jugador recibió daño. Salud restante: " + currentHealth);
+        Debug.Log("Jugador recibiï¿½ daï¿½o. Salud restante: " + currentHealth);
 
         // Calcular el valor normalizado
         float healthNormalized = currentHealth / maxHealth;
@@ -132,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isInvulnerable = true; // Activar invulnerabilidad
         Debug.Log("Jugador es invulnerable.");
-        yield return new WaitForSeconds(invulnerableDuration); // Esperar duración de invulnerabilidad
+        yield return new WaitForSeconds(invulnerableDuration); // Esperar duraciï¿½n de invulnerabilidad
         isInvulnerable = false; // Desactivar invulnerabilidad
         Debug.Log("Jugador ya no es invulnerable.");
     }
@@ -140,18 +145,18 @@ public class PlayerMovement : MonoBehaviour
     void Die()
     {
         Debug.Log("Jugador ha muerto.");
-        // Lógica para la muerte del jugador (puedes personalizar)
-         Destroy(gameObject); // Opcional, destruye el jugador
+        // Lï¿½gica para la muerte del jugador (puedes personalizar)
+        Destroy(gameObject); // Opcional, destruye el jugador
     }
 
-        public void Pollo(float damage)
+    public void Pollo(float damage)
     {
-      
+
 
         // Reducir la salud del jugador
         currentHealth -= damage;
         if (currentHealth > maxHealth) currentHealth = maxHealth; // Evitar valores fuera de rango
-        Debug.Log("Jugador recibió salud. Vida restante: " + currentHealth);
+        Debug.Log("Jugador recibiï¿½ salud. Vida restante: " + currentHealth);
 
         // Calcular el valor normalizado
         float healthNormalized = currentHealth / maxHealth;
@@ -161,8 +166,5 @@ public class PlayerMovement : MonoBehaviour
         {
             barraVida.CambiarVidaAct(healthNormalized);
         }
-
-        
-       
     }
 }

@@ -10,7 +10,7 @@ public class Balajefe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * velocidad * Time.deltaTime);
+        transform.Translate(Vector2.right * velocidad * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
