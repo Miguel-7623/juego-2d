@@ -13,6 +13,9 @@ TagManager:
   - pollo
   - monster
   - Espada
+  - EnemigoF
+  - EnemigoD
+  - EnemigoT
   layers:
   - Default
   - TransparentFX

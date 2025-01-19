@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7107905217764359532}
   m_Layer: 0
   m_Name: RobotTanque
-  m_TagString: Enemigo
+  m_TagString: EnemigoT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

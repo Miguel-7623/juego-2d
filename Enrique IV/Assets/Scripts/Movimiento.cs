@@ -112,17 +112,17 @@ public class PlayerMovement : MonoBehaviour
                 EnemigoPendejo enemigoo = enemigo.GetComponent<EnemigoPendejo>();
                 if (enemigoo != null) enemigoo.golpe();
             }
-            if (enemigo.CompareTag("Enemigo"))
+            if (enemigo.CompareTag("EnemigoT"))
             {
                 EnemigoFlotIA enemigoo = enemigo.GetComponent<EnemigoFlotIA>();
                 if (enemigoo != null) enemigoo.golpe();
             }
-            if (enemigo.CompareTag("Enemigo"))
+            if (enemigo.CompareTag("EnemigoF"))
             {
                 EnemigoFlotanteIA enemigoo = enemigo.GetComponent<EnemigoFlotanteIA>();
                 if (enemigoo != null) enemigoo.golpe();
             }
-            if (enemigo.CompareTag("Enemigo"))
+            if (enemigo.CompareTag("EnemigoD"))
             {
                 EnemigoIA enemigoo = enemigo.GetComponent<EnemigoIA>();
                 if (enemigoo != null) enemigoo.golpe();
@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
                 if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         
         animator.SetBool("estaAtacando", false);
     }

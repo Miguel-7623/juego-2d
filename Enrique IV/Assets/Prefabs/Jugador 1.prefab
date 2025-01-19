@@ -148,8 +148,8 @@ GameObject:
   - component: {fileID: 1780773922722729916}
   - component: {fileID: 7261361659515907500}
   - component: {fileID: 5885962239085597150}
-  - component: {fileID: 7948262638855314922}
   - component: {fileID: 785471585564471069}
+  - component: {fileID: -4844534164591589346}
   m_Layer: 6
   m_Name: Jugador 1
   m_TagString: Jugador
@@ -167,7 +167,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.7080774, y: -1.8478267, z: -0.011799431}
-  m_LocalScale: {x: 1.26, y: 1.3034376, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2092440262344265902}
@@ -247,34 +247,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &7948262638855314922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3976204125768508082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff7bccd2e6c5a64f91d59fb02e9b1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 5
-  fuerzaSalto: 7
-  capaSuelo:
-    serializedVersion: 2
-    m_Bits: 256
-  puntoSuelo: {fileID: 2092440262344265902}
-  radioSuelo: 0.25
-  direccion: 1
-  radioAtaque: 1
-  capaEnemigos:
-    serializedVersion: 2
-    m_Bits: 128
-  vidaReducida: 20
-  puntoAtaque: {fileID: 4154594242698700488}
-  tiempoEntreAtaques: 1
+  m_Constraints: 4
 --- !u!114 &785471585564471069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +265,33 @@ MonoBehaviour:
   capaObjetos:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &-4844534164591589346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3976204125768508082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60129f31a6af2304c9065ef1433d59ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  barraVida: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  invulnerableDuration: 2
+  direccion: 1
+  radioAtaque: 3
+  capaEnemigos:
+    serializedVersion: 2
+    m_Bits: 0
+  vidaReducida: 20
+  puntoAtaque: {fileID: 0}
+  tiempoEntreAtaques: 1
+  musicClip: {fileID: 0}
+  musicClip2: {fileID: 0}
 --- !u!1 &5195355447771055120
 GameObject:
   m_ObjectHideFlags: 0
