@@ -101,21 +101,36 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, capaEnemigos);
         foreach (Collider2D enemigo in enemigosEnRadio)
         {
-            if (colision.CompareTag("Jefe"))
+            if (enemigo.CompareTag("Jefe"))
             {
-                JefeAI jefe = colision.GetComponent<JefeAI>();
+                JefeAI jefe = enemigo.GetComponent<JefeAI>();
                 if (jefe != null) jefe.TomarDan(vidaReducida);
             }
 
-            if (colision.CompareTag("Enemigo"))
+            if (enemigo.CompareTag("Enemigo"))
             {
-                EnemigoPendejo enemigo = colision.GetComponent<EnemigoPendejo>();
-                if (enemigo != null) enemigo.golpe();
+                EnemigoPendejo enemigoo = enemigo.GetComponent<EnemigoPendejo>();
+                if (enemigoo != null) enemigoo.golpe();
             }
-            
-            if (colision.CompareTag("Jefeplanta"))
+            if (enemigo.CompareTag("Enemigo"))
             {
-                Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
+                EnemigoFlotIA enemigoo = enemigo.GetComponent<EnemigoFlotIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+            if (enemigo.CompareTag("Enemigo"))
+            {
+                EnemigoFlotanteIA enemigoo = enemigo.GetComponent<EnemigoFlotanteIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+            if (enemigo.CompareTag("Enemigo"))
+            {
+                EnemigoIA enemigoo = enemigo.GetComponent<EnemigoIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+
+            if (enemigo.CompareTag("Jefeplanta"))
+            {
+                Jefeplanta jefePlanta = enemigo.GetComponent<Jefeplanta>();
                 if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
         }

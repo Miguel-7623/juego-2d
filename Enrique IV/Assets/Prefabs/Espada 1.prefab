@@ -232,4 +232,6 @@ MonoBehaviour:
   vidaReducida: 20
   puntoAtaque: {fileID: 0}
   tiempoEntreAtaques: 1
+  dano: 0
   jugador: {fileID: 0}
+  musicClip: {fileID: 0}

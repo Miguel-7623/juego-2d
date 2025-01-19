@@ -94,7 +94,7 @@ public class EnemigoPendejo : MonoBehaviour
      public void golpe()
     {
         animator.SetTrigger("Muerte");
-        Destroy(gameObject);
+        Destroy(gameObject,1f);
     }
 
     private void OnDrawGizmos()
