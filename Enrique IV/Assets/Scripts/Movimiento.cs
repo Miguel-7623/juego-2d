@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     // ATAQUES CON LAS PATAS.
-    public float radioAtaque = 1f;
+    public float radioAtaque = 3f;
     public LayerMask capaEnemigos;
     public int vidaReducida = 20;
     public Transform puntoAtaque;
