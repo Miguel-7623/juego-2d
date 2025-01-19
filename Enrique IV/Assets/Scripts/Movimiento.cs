@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     // ATAQUES CON LAS PATAS.
-    public float radioAtaque = 1f;
+    public float radioAtaque = 3f;
     public LayerMask capaEnemigos;
     public int vidaReducida = 20;
     public Transform puntoAtaque;
@@ -100,10 +101,23 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, capaEnemigos);
         foreach (Collider2D enemigo in enemigosEnRadio)
         {
-            //VidaEnemigo vidaEnemigo = enemigo.GetComponent<VidaEnemigo>();
-            //if (vidaEnemigo != null) vidaEnemigo.RecibirDano(vidaReducida);
-            EnemigoPendejo xd = enemigo.GetComponent<EnemigoPendejo>();
-            if (xd != null) xd.golpe();
+            if (colision.CompareTag("Jefe"))
+            {
+                JefeAI jefe = colision.GetComponent<JefeAI>();
+                if (jefe != null) jefe.TomarDan(vidaReducida);
+            }
+
+            if (colision.CompareTag("Enemigo"))
+            {
+                EnemigoPendejo enemigo = colision.GetComponent<EnemigoPendejo>();
+                if (enemigo != null) enemigo.golpe();
+            }
+            
+            if (colision.CompareTag("Jefeplanta"))
+            {
+                Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
+                if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
+            }
         }
         yield return new WaitForSeconds(0.5f);
         
@@ -156,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Jugador ha muerto.");
         // L�gica para la muerte del jugador (puedes personalizar)
         Destroy(gameObject); // Opcional, destruye el jugador
+        SceneManager.LoadScene("PantallaMuerte");
     }
 
     public void Pollo(float damage)
