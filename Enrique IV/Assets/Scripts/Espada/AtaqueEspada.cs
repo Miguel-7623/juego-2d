@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AtaqueEspada : MonoBehaviour
@@ -12,7 +13,7 @@ public class AtaqueEspada : MonoBehaviour
 
     private float tiempoUltimoAtaque;
     private Animator animator;
-
+    [SerializeField] private float dano;
 
     public GameObject jugador;
     private Transform jugadorTransf;
@@ -33,20 +34,37 @@ public class AtaqueEspada : MonoBehaviour
             tiempoUltimoAtaque = Time.time;
         }
 
-        Vector3 direccion = jugadorTransf.localScale.x > 0 ? Vector3.right : Vector3.left;
-        transform.localScale = new Vector3(direccion.x, transform.localScale.y, transform.localScale.z);
+
+        if (jugadorTransf != null)
+        {
+            Vector3 direccion = jugadorTransf.localScale.x > 0 ? Vector3.right : Vector3.left;
+            transform.localScale = new Vector3(direccion.x, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private IEnumerator Atacar()
     {
         animator.SetBool("atacandoConEspada", true);
         Debug.Log("ataque con espada");
-        Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
-        foreach (Collider2D enemigo in enemigosEnRadio)
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
+
+        foreach (Collider2D colision in objetos)
         {
-            VidaEnemigo vidaEnemigo = enemigo.GetComponent<VidaEnemigo>();
-            if (vidaEnemigo != null) vidaEnemigo.RecibirDano(vidaReducida);
+            //VidaEnemigo vidaEnemigo = enemigo.GetComponent<VidaEnemigo>();
+            //if (vidaEnemigo != null) vidaEnemigo.RecibirDano(vidaReducida);
+
+            if (colision.CompareTag("Jefe"))
+            {
+                Debug.Log("SIMON");
+                colision.GetComponent<JefeAI>().TomarDan(vidaReducida);
+            }
+
+            if (colision.CompareTag("Enemigo"))
+            {
+                colision.GetComponent<EnemigoPendejo>().golpe();
+            }
         }
+
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("atacandoConEspada", false);
     }

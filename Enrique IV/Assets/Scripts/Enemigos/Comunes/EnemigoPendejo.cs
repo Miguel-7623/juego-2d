@@ -85,12 +85,13 @@ public class EnemigoPendejo : MonoBehaviour
         {
             if (colision.CompareTag("Jugador"))
             {
-                colision.GetComponent<PlayerMovement>().TakeDamage(dano);
+                PlayerMovement player = colision.GetComponent<PlayerMovement>();
+                if (player != null) player.TakeDamage(dano);
             }
         }
     }
 
-    private void golpe()
+     public void golpe()
     {
         animator.SetTrigger("Muerte");
         Destroy(gameObject);

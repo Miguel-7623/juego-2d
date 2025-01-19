@@ -53,6 +53,8 @@ public class JefeAI : MonoBehaviour
     public void TomarDan(float dan)
     {
         vida -= dan;
+        Debug.Log("VIDA: " + vida);
+        Debug.Log("DANO: " + dan);
        // barraVida.CambiarVidaAct(vida);
         if (vida <= 0)
         {
@@ -68,10 +70,13 @@ public class JefeAI : MonoBehaviour
 
     public void MiraJugador()
     {
-        if ((Player.position.x > transform.position.x && !mirandoDerecha) ||
-            (Player.position.x < transform.position.x && mirandoDerecha))
+        if (Player != null)
         {
-            Girar();
+            if ((Player.position.x > transform.position.x && !mirandoDerecha) ||
+                (Player.position.x < transform.position.x && mirandoDerecha))
+            {
+                Girar();
+            }
         }
     }
 
@@ -84,10 +89,8 @@ public class JefeAI : MonoBehaviour
             Debug.Log(colision);
             if (colision.CompareTag("Jugador"))
             {
-              
-               colision.GetComponent<PlayerMovement>().TakeDamage(dano);
-             
-                
+                PlayerMovement player = colision.GetComponent<PlayerMovement>();
+                if (player != null) player.TakeDamage(dano);
             }
         }
     }
@@ -103,9 +106,11 @@ public class JefeAI : MonoBehaviour
 
     private void Update()
     {
-       
-        float distanciaj = Vector2.Distance(transform.position, Player.position);
-        animator.SetFloat("Distanciaj", distanciaj);
+        if (Player != null)
+        {
+            float distanciaj = Vector2.Distance(transform.position, Player.position);
+            animator.SetFloat("Distanciaj", distanciaj);
+        }
         //Debug.Log(distanciaj);
        
         

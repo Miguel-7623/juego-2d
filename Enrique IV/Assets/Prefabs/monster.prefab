@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movimiento: {fileID: 0}
-  velocidad: 2
+  velocidad: 1
   amplitud: 3
