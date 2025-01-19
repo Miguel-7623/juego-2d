@@ -24,6 +24,7 @@ public class MovimientoEnrique : MonoBehaviour
     public int vidaReducida = 20;
     public Transform puntoAtaque;
     public float tiempoEntreAtaques = 1;
+   
 
     private float tiempoUltimoAtaque;
     //public Transform espada;
@@ -78,8 +79,9 @@ public class MovimientoEnrique : MonoBehaviour
         escala.x *= -1; // Invierte el eje X
         transform.localScale = escala; // Asigna la nueva escala
     }
-    private IEnumerator AtaqueBasico()
-    {
+    private IEnumerator AtaqueBasico() { 
+    
+       
         animator.SetBool("estaAtacando", true);
         Debug.Log("ataque basico (con las patas).");
         Collider2D[] enemigosEnRadio = Physics2D.OverlapCircleAll(puntoAtaque.position, capaEnemigos);
