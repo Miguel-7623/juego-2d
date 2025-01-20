@@ -102,39 +102,24 @@ public class PlayerMovement : MonoBehaviour
         Awake();
         PlayMusic();
 
-        Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
-        foreach (Collider2D enemigo in objetos)
+        Collider2D[] enemigos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
+        foreach (Collider2D colision in enemigos)
         {
-            if (enemigo.CompareTag("Jefe"))
+            if (colision.CompareTag("Jefe"))
             {
-                JefeAI jefe = enemigo.GetComponent<JefeAI>();
+                JefeAI jefe = colision.GetComponent<JefeAI>();
                 if (jefe != null) jefe.TomarDan(vidaReducida);
             }
 
-            if (enemigo.CompareTag("Enemigo"))
+            if (colision.CompareTag("Enemigo"))
             {
-                EnemigoPendejo enemigoo = enemigo.GetComponent<EnemigoPendejo>();
-                if (enemigoo != null) enemigoo.golpe();
+                EnemigoPendejo enemigoP = colision.GetComponent<EnemigoPendejo>();
+                if (enemigoP != null) enemigoP.golpe();
             }
-            if (enemigo.CompareTag("EnemigoT"))
+            
+            if (colision.CompareTag("Jefeplanta"))
             {
-                EnemigoFlotIA enemigoo = enemigo.GetComponent<EnemigoFlotIA>();
-                if (enemigoo != null) enemigoo.golpe();
-            }
-            if (enemigo.CompareTag("EnemigoF"))
-            {
-                EnemigoFlotanteIA enemigoo = enemigo.GetComponent<EnemigoFlotanteIA>();
-                if (enemigoo != null) enemigoo.golpe();
-            }
-            if (enemigo.CompareTag("EnemigoD"))
-            {
-                EnemigoIA enemigoo = enemigo.GetComponent<EnemigoIA>();
-                if (enemigoo != null) enemigoo.golpe();
-            }
-
-            if (enemigo.CompareTag("Jefeplanta"))
-            {
-                Jefeplanta jefePlanta = enemigo.GetComponent<Jefeplanta>();
+                Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
                 if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
         }
