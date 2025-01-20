@@ -106,8 +106,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1716888715
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -668476755, guid: 85db7b168ef20e544b72386ab8e30606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -191,7 +191,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &4990683333279338149
 Animator:
   serializedVersion: 5
@@ -228,8 +228,6 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
-  velocidadMovimiento: 0
-  distanciaMax: 0
   puntoInicial: {x: 0, y: 0, z: 0}
   mirandoDerecha: 1
   rb2D: {fileID: 4948300346654369508}

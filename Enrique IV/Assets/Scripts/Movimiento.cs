@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement; // Direcci�n del movimiento
 
     public int direccion = 1;
-    private Animator animator;
+    public Animator animator;
 
     // ATAQUES CON LAS PATAS.
     public float radioAtaque = 3f;
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogWarning("BarraVida no asignada en el inspector.");
         }
 
-        animator = GetComponentInChildren<Animator>(); 
+        //animator = GetComponentInChildren<Animator>(); 
     }
 
     void Update()
@@ -57,8 +58,6 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");   // W/S o Flechas arriba/abajo
 
 
-        Debug.Log(movement.x +  " " + movement.y);
-        animator.SetBool("estaCorriendo", movement.x != 0);
 
         // Verificar si el jugador ha muerto
         if (currentHealth <= 0)
@@ -80,6 +79,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Girar();
         }
+
+
+        Debug.Log(animator);
+        animator.SetBool("estaCorriendo", movement.x != 0);
     }
 
     private void Girar()
@@ -100,27 +103,42 @@ public class PlayerMovement : MonoBehaviour
         PlayMusic();
 
         Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
-        foreach (Collider2D colision in objetos)
+        foreach (Collider2D enemigo in objetos)
         {
-            if (colision.CompareTag("Jefe"))
+            if (enemigo.CompareTag("Jefe"))
             {
-                JefeAI jefe = colision.GetComponent<JefeAI>();
+                JefeAI jefe = enemigo.GetComponent<JefeAI>();
                 if (jefe != null) jefe.TomarDan(vidaReducida);
             }
 
-            if (colision.CompareTag("Enemigo"))
+            if (enemigo.CompareTag("Enemigo"))
             {
-                EnemigoPendejo enemigo = colision.GetComponent<EnemigoPendejo>();
-                if (enemigo != null) enemigo.golpe();
+                EnemigoPendejo enemigoo = enemigo.GetComponent<EnemigoPendejo>();
+                if (enemigoo != null) enemigoo.golpe();
             }
-            
-            if (colision.CompareTag("Jefeplanta"))
+            if (enemigo.CompareTag("EnemigoT"))
             {
-                Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
+                EnemigoFlotIA enemigoo = enemigo.GetComponent<EnemigoFlotIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+            if (enemigo.CompareTag("EnemigoF"))
+            {
+                EnemigoFlotanteIA enemigoo = enemigo.GetComponent<EnemigoFlotanteIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+            if (enemigo.CompareTag("EnemigoD"))
+            {
+                EnemigoIA enemigoo = enemigo.GetComponent<EnemigoIA>();
+                if (enemigoo != null) enemigoo.golpe();
+            }
+
+            if (enemigo.CompareTag("Jefeplanta"))
+            {
+                Jefeplanta jefePlanta = enemigo.GetComponent<Jefeplanta>();
                 if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         
         animator.SetBool("estaAtacando", false);
     }

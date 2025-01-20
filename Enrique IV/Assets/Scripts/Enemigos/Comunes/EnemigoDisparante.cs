@@ -99,6 +99,11 @@ public class EnemigoIA : MonoBehaviour
             StartCoroutine(DispararCadaDosSegundos());
         }
     }
+    public void golpe()
+    {
+        animator.SetTrigger("Muerte");
+        Destroy(gameObject, 1f);
+    }
 
     private void EstadoVolviendo()
     {

@@ -56,21 +56,14 @@ public class EnemigoFlotIA : MonoBehaviour
 
         }
     }
-    public void TomarDan(float dan)
+    public void golpe()
     {
-       
-        
         animator.SetTrigger("Muerte");
-        Destroy(gameObject);
-
-
+        Destroy(gameObject, 1f);
     }
+
     //Por si le quuieren agregar salud al enemigo
-    private void Muerte()
-    {
-        Destroy(gameObject);
-    }
-
+   
     private void EstadoSiguiedo()
     {
         animator.SetBool("Corriendo", true);
