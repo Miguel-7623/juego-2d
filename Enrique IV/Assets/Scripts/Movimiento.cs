@@ -122,6 +122,24 @@ public class PlayerMovement : MonoBehaviour
                 Jefeplanta jefePlanta = colision.GetComponent<Jefeplanta>();
                 if (jefePlanta != null) jefePlanta.TomarDano(vidaReducida);
             }
+
+            if (colision.CompareTag("EnemigoF"))
+            {
+                EnemigoFlotanteIA enemigoF = colision.GetComponent<EnemigoFlotanteIA>();
+                if (enemigoF != null) enemigoF.golpe();
+            }
+
+            if (colision.CompareTag("EnemigoD"))
+            {
+                EnemigoIA enemigoD = colision.GetComponent<EnemigoIA>();
+                if (enemigoD != null) enemigoD.golpe();
+            }
+
+            if (colision.CompareTag("EnemigoT"))
+            {
+                EnemigoFlotIA enemigoT = colision.GetComponent<EnemigoFlotIA>();
+                if (enemigoT != null) enemigoT.golpe();
+            }
         }
         yield return new WaitForSeconds(1f);
         
