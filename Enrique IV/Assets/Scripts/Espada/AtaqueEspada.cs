@@ -17,6 +17,8 @@ public class AtaqueEspada : MonoBehaviour
 
     public GameObject jugador;
     private Transform jugadorTransf;
+    public AudioClip musicClip; // Arrastra aquí tu archivo de música desde el inspector
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,8 @@ public class AtaqueEspada : MonoBehaviour
     private IEnumerator Atacar()
     {
         animator.SetBool("atacandoConEspada", true);
+        Awake();
+        PlayMusic();
         Debug.Log("ataque con espada");
         Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
 
@@ -71,5 +75,35 @@ public class AtaqueEspada : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("atacandoConEspada", false);
+    }
+    void Awake()
+    {
+        // Asegúrate de que este GameObject no se destruya al cambiar de escena
+        DontDestroyOnLoad(gameObject);
+
+        // Configura el AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = musicClip;
+        audioSource.loop = false; // Hacer que la música se reproduzca en bucle
+        audioSource.playOnAwake = false; // No iniciar automáticamente
+
+        // Inicia la reproducción
+        // PlayMusic();
+    }
+
+    public void PlayMusic()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

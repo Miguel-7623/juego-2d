@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
     public int vidaReducida = 20;
     public Transform puntoAtaque;
     public float tiempoEntreAtaques = 1;
+    public AudioClip musicClip; // Arrastra aquí tu archivo de música desde el inspector
+    private AudioSource audioSource;
+    public AudioClip musicClip2;
+
 
     private float tiempoUltimoAtaque;
 
@@ -43,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogWarning("BarraVida no asignada en el inspector.");
         }
 
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>(); 
     }
 
     void Update()
@@ -88,8 +92,13 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator AtaqueBasico()
     {
+
         animator.SetBool("estaAtacando", true);
         Debug.Log("ataque basico (con las patas).");
+        
+        Awake();
+        PlayMusic();
+
         Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque, capaEnemigos);
         foreach (Collider2D colision in objetos)
         {
@@ -112,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(0.5f);
+        
         animator.SetBool("estaAtacando", false);
     }
 
@@ -180,6 +190,36 @@ public class PlayerMovement : MonoBehaviour
         if (barraVida != null)
         {
             barraVida.CambiarVidaAct(healthNormalized);
+        }
+    }
+    void Awake()
+    {
+        // Asegúrate de que este GameObject no se destruya al cambiar de escena
+        DontDestroyOnLoad(gameObject);
+
+        // Configura el AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = musicClip;
+        audioSource.loop = false; // Hacer que la música se reproduzca en bucle
+        audioSource.playOnAwake = false; // No iniciar automáticamente
+
+        // Inicia la reproducción
+       // PlayMusic();
+    }
+
+    public void PlayMusic()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 }
